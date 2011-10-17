@@ -1,0 +1,15 @@
+    div#form.modal.hide.fade
+      div.modal-header
+        a.close(href="#")="&times;"
+        h3.title="Edit event"
+      div.modal-body
+        form
+          fieldset
+            legend="Edit time slot"
+            div.clearfix
+              label(for="startTime")="Start time"
+              div.input
+                input#startTime
+      div.modal-footer
+        a.btn.primary(href="#")="Save"
+        a.btn.secondary(href="#")="Cancel"

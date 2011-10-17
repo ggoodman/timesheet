@@ -1,0 +1,41 @@
+!!! 5
+html(lang="en")
+  head
+    != SocketStream
+    meta(charset="utf-8")
+    title Timesheet
+  body
+    div.topbar
+      div.fill
+        div.container
+    div.container
+      div.content
+        div#calendar
+    div#form.modal.hide.fade
+      div.modal-header
+        a.close(href="#")="&times;"
+        h3.title="Edit time block"
+      div.modal-body
+        form
+          div.clearfix
+            label="Time block"
+            div.input
+              div.inline-inputs
+                input#startTime.mini(name="start")
+                span="&nbsp;to&nbsp;"
+                input#endTime.mini(name="end")
+                span="&nbsp;on&nbsp;"
+                input#date.small(name="date")
+              span.help-inline="hh:mmnn"
+          div.clearfix
+            label(for="title")="Title"
+            div.input
+              input#title.xlarge
+          div.clearfix
+            label(for="description")="Description"
+            div.input
+              textarea#description.xlarge               
+      div.modal-footer
+        button.btn.secondary.cancel.pull-left="Cancel"
+        button.btn.primary.save="Save"
+        button.btn.danger.delete="Delete"
